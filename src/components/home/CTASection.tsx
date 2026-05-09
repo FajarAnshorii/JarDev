@@ -28,7 +28,7 @@ export function CTASection() {
           className="relative"
         >
           {/* Main CTA Card */}
-          <div className="relative p-8 md:p-12 lg:p-16 rounded-3xl overflow-hidden">
+          <div className="relative p-6 sm:p-8 md:p-12 lg:p-16 rounded-2xl sm:rounded-3xl overflow-hidden">
             {/* Background Gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/10 to-background" />
             <div className="absolute inset-0 bg-grid-pattern opacity-20" />
@@ -71,7 +71,7 @@ export function CTASection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed"
+                className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-10 leading-relaxed"
               >
                 Jangan biarkan ide bisnis Anda hanya jadi impian. Hubungi kami
                 sekarang dan dapatkan konsultasi gratis untuk proyek Anda.

@@ -145,10 +145,10 @@ export default function PortfolioPage() {
   return (
     <main className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-16 md:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-        <div className="orb orb-primary w-[400px] h-[400px] -top-32 -right-32 opacity-20" />
-        <div className="orb orb-secondary w-[300px] h-[300px] bottom-0 -left-32 opacity-15" />
+        <div className="orb orb-primary w-52 sm:w-72 md:w-96 lg:w-[400px] h-52 sm:h-72 md:h-96 lg:h-[400px] -top-24 sm:-top-32 md:-top-32 -right-24 sm:-right-32 md:-right-32 opacity-20" />
+        <div className="orb orb-secondary w-36 sm:w-56 md:w-72 lg:w-[300px] h-36 sm:h-56 md:h-72 lg:h-[300px] bottom-0 -left-24 sm:-left-32 md:-left-32 opacity-15" />
 
         <div className="container-site relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -156,10 +156,10 @@ export default function PortfolioPage() {
               <Folder className="w-4 h-4 mr-2" />
               Portfolio Kami
             </Badge>
-            <h1 className="heading-display text-4xl md:text-5xl lg:text-6xl mb-6">
+            <h1 className="heading-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6">
               Hasil Kerja yang <span className="text-gradient-primary">Berbicara</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
               Kumpulan project yang telah kami kerjakan untuk berbagai klien dari berbagai industri.
             </p>
           </div>
@@ -167,7 +167,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-12 relative">
+      <section className="py-8 md:py-12 relative">
         <div className="container-site">
           <SectionHeading
             badge="Featured"
@@ -176,7 +176,7 @@ export default function PortfolioPage() {
             centered
           />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
             {featuredProjects.map((project, index) => (
               <Card
                 key={index}
@@ -185,7 +185,7 @@ export default function PortfolioPage() {
                 <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 relative overflow-hidden">
                   <div className="absolute inset-0 bg-grid-pattern opacity-30" />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-6xl opacity-50 group-hover:scale-110 transition-transform duration-500">
+                    <span className="text-5xl sm:text-6xl opacity-50 group-hover:scale-110 transition-transform duration-500">
                       {project.category === "ecommerce" && "🛒"}
                       {project.category === "website" && "🌐"}
                       {project.category === "mobile" && "📱"}
@@ -244,7 +244,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* All Projects */}
-      <section className="py-24 bg-card/50 relative">
+      <section className="py-16 md:py-24 bg-card/50 relative">
         <div className="container-site">
           <SectionHeading
             badge="Semua Project"
@@ -261,7 +261,7 @@ export default function PortfolioPage() {
               >
                 <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 relative">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-5xl opacity-40 group-hover:opacity-70 transition-opacity">
+                    <span className="text-4xl sm:text-5xl opacity-40 group-hover:opacity-70 transition-opacity">
                       {project.category === "ecommerce" && "🛒"}
                       {project.category === "website" && "🌐"}
                       {project.category === "mobile" && "📱"}
@@ -298,9 +298,9 @@ export default function PortfolioPage() {
       </section>
 
       {/* Statistics */}
-      <section className="py-24 relative">
+      <section className="py-16 md:py-24 relative">
         <div className="container-site">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {[
               { value: "150+", label: "Project Selesai" },
               { value: "50+", label: "Klien Puas" },
@@ -319,16 +319,16 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-primary/10" />
-        <div className="orb orb-secondary w-[400px] h-[400px] -bottom-32 left-1/2 -translate-x-1/2 opacity-20" />
+        <div className="orb orb-secondary w-52 sm:w-72 md:w-96 lg:w-[400px] h-52 sm:h-72 md:h-96 lg:h-[400px] -bottom-16 sm:-bottom-24 md:-bottom-32 left-1/2 -translate-x-1/2 opacity-20" />
 
         <div className="container-site relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="heading-display text-3xl md:text-4xl mb-6">
               Punya Project in Mind? <span className="text-gradient-primary">Let's Talk!</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
               Kami siap membantu mewujudkan ide digital Anda menjadi kenyataan.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

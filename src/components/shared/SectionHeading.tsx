@@ -88,7 +88,7 @@ export function SectionHeading({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-4 text-muted-foreground text-lg leading-relaxed"
+          className="mt-4 text-muted-foreground text-base sm:text-base md:text-lg leading-relaxed"
         >
           {description}
         </motion.p>

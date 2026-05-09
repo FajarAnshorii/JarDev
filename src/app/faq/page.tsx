@@ -108,9 +108,9 @@ export default function FAQPage() {
   return (
     <main className="min-h-screen pt-20">
       {/* Hero */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-16 md:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-        <div className="orb orb-primary w-[500px] h-[500px] -top-48 left-1/2 -translate-x-1/2 opacity-20" />
+        <div className="orb orb-primary w-52 sm:w-72 md:w-96 lg:w-[500px] h-52 sm:h-72 md:h-96 lg:h-[500px] -top-24 sm:-top-32 md:-top-48 left-1/2 -translate-x-1/2 opacity-20" />
 
         <div className="container-site relative z-10">
           <div className="max-w-3xl mx-auto text-center">
@@ -118,10 +118,10 @@ export default function FAQPage() {
               <HelpCircle className="w-4 h-4 mr-2" />
               FAQ
             </Badge>
-            <h1 className="heading-display text-4xl md:text-5xl lg:text-6xl mb-6">
+            <h1 className="heading-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6">
               Pertanyaan yang Sering <span className="text-gradient-primary">Diajukan</span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
               Can't find the answer you're looking for? Chat with us directly.
             </p>
             <div className="mt-8">
@@ -138,9 +138,9 @@ export default function FAQPage() {
       </section>
 
       {/* FAQ Content */}
-      <section className="py-24">
+      <section className="py-16 md:py-24">
         <div className="container-site">
-          <div className="max-w-4xl mx-auto space-y-12">
+          <div className="max-w-4xl mx-auto space-y-8 sm:space-y-12">
             {faqCategories.map((cat, index) => {
               const Icon = cat.icon;
               return (
@@ -149,7 +149,7 @@ export default function FAQPage() {
                     <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center">
                       <Icon className="w-5 h-5 text-white" />
                     </div>
-                    <h2 className="text-2xl font-bold">{cat.category}</h2>
+                    <h2 className="text-xl sm:text-2xl font-bold">{cat.category}</h2>
                   </div>
                   <div className="space-y-4">
                     {cat.items.map((item, i) => (
@@ -173,13 +173,13 @@ export default function FAQPage() {
       </section>
 
       {/* Still Have Questions CTA */}
-      <section className="py-24 bg-card/50 relative">
+      <section className="py-16 md:py-24 bg-card/50 relative">
         <div className="container-site">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="heading-display text-3xl mb-6">
+            <h2 className="heading-display text-2xl sm:text-3xl mb-4 sm:mb-6">
               Masih Ada Pertanyaan?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
               Tim kami siap membantu menjawab semua pertanyaan Anda. Jangan sungkan untuk menghubungi kami.
             </p>
             <Link href="/contact">

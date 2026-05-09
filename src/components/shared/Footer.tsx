@@ -78,15 +78,15 @@ export function Footer() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-primary/10 border border-primary/20 rounded-2xl p-6 mb-16 flex flex-col md:flex-row items-center justify-between gap-6"
+            className="bg-gradient-primary/10 border border-primary/20 rounded-2xl p-5 sm:p-6 mb-10 sm:mb-16 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6"
           >
             <div className="flex items-center gap-4">
               <div className="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-lg">
                 <MessageCircle className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold">Chat Langsung dengan Tim Kami</h3>
-                <p className="text-muted-foreground text-sm">Respon cepat via WhatsApp. Konsultasi gratis!</p>
+                <h3 className="text-base sm:text-lg font-semibold">Chat Langsung dengan Tim Kami</h3>
+                <p className="text-muted-foreground text-xs sm:text-sm">Respon cepat via WhatsApp. Konsultasi gratis!</p>
               </div>
             </div>
             <Button

@@ -62,7 +62,7 @@ export function PortfolioSection() {
     <section className="relative py-20 md:py-32 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-80 sm:w-[600px] md:w-[800px] h-48 sm:h-64 md:h-[400px] bg-primary/10 rounded-full blur-[100px] md:blur-[120px]" />
 
       <div className="container-site relative z-10">
         <SectionHeading
@@ -90,7 +90,7 @@ export function PortfolioSection() {
                   <div className="relative aspect-video overflow-hidden">
                     {/* Placeholder Image */}
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                      <span className="text-6xl opacity-30">
+                      <span className="text-5xl sm:text-6xl opacity-30">
                         {index === 0 ? "🏢" : index === 1 ? "🛒" : index === 2 ? "📱" : "📚"}
                       </span>
                     </div>
@@ -131,7 +131,7 @@ export function PortfolioSection() {
 
                     {/* Featured Badge */}
                     {project.featured && (
-                      <div className="absolute top-4 left-4">
+                      <div className="absolute top-2 sm:top-4 left-2 sm:left-4">
                         <Badge className="bg-gradient-primary text-white border-0">
                           Featured
                         </Badge>

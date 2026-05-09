@@ -158,10 +158,10 @@ export default function PricingPage() {
   return (
     <main className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 overflow-hidden">
+      <section className="relative py-16 md:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-        <div className="orb orb-primary w-[500px] h-[500px] -top-48 left-1/2 -translate-x-1/2 opacity-20" />
-        <div className="orb orb-accent w-[300px] h-[300px] bottom-0 right-0 opacity-15" />
+        <div className="orb orb-primary w-52 sm:w-72 md:w-96 lg:w-[500px] h-52 sm:h-72 md:h-96 lg:h-[500px] -top-24 sm:-top-32 md:-top-48 left-1/2 -translate-x-1/2 opacity-20" />
+        <div className="orb orb-accent w-36 sm:w-56 md:w-72 lg:w-[300px] h-36 sm:h-56 md:h-72 lg:h-[300px] bottom-0 right-0 opacity-15" />
 
         <div className="container-site relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -169,10 +169,10 @@ export default function PricingPage() {
               <Sparkles className="w-4 h-4 mr-2" />
               Harga Transparan
             </Badge>
-            <h1 className="heading-display text-4xl md:text-5xl lg:text-6xl mb-8">
+            <h1 className="heading-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 md:mb-8">
               Investasi untuk <span className="text-gradient-primary">Digital Presence</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Harga yang kompetitif dengan hasil berkualitas. Tidak ada biaya tersembunyi. Transparan dari awal.
             </p>
           </div>
@@ -182,7 +182,7 @@ export default function PricingPage() {
       {/* Pricing Cards */}
       <section className="py-24 md:py-32 relative">
         <div className="container-site">
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {plans.map((plan, index) => {
               const Icon = plan.icon;
               return (
@@ -203,11 +203,11 @@ export default function PricingPage() {
                     </div>
                   )}
 
-                  <CardHeader className="pt-12 pb-6 px-8">
-                    <div className={`w-16 h-16 rounded-2xl ${colorMap[plan.color]} flex items-center justify-center mb-6`}>
-                      <Icon className="w-8 h-8" />
+                  <CardHeader className="pt-10 sm:pt-12 pb-4 sm:pb-6 px-5 sm:px-6 md:px-8">
+                    <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl md:rounded-2xl ${colorMap[plan.color]} flex items-center justify-center mb-4 sm:mb-6`}>
+                      <Icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
                     </div>
-                    <h3 className="text-2xl font-bold">{plan.name}</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold">{plan.name}</h3>
                     <div className="mt-6">
                       <span className="text-4xl font-bold text-gradient-primary">{plan.price}</span>
                       <span className="text-muted-foreground ml-2">{plan.period}</span>
@@ -215,7 +215,7 @@ export default function PricingPage() {
                     <p className="text-muted-foreground text-sm mt-4 leading-relaxed">{plan.description}</p>
                   </CardHeader>
 
-                  <CardContent className="pb-8 px-8">
+                  <CardContent className="pb-6 sm:pb-8 px-5 sm:px-6 md:px-8">
                     <ul className="space-y-4">
                       {plan.features.map((feature, i) => (
                         <li key={i} className="flex items-start gap-3 text-sm">
@@ -255,7 +255,7 @@ export default function PricingPage() {
       </section>
 
       {/* Add-ons Section */}
-      <section className="py-24 bg-card/50 relative">
+      <section className="py-16 md:py-24 bg-card/50 relative">
         <div className="container-site">
           <SectionHeading
             badge="Add-ons"
@@ -283,7 +283,7 @@ export default function PricingPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 relative">
+      <section className="py-16 md:py-24 relative">
         <div className="container-site">
           <SectionHeading
             badge="FAQ"
@@ -313,7 +313,7 @@ export default function PricingPage() {
       </section>
 
       {/* Trust Badges */}
-      <section className="py-16 border-t border-b border-border">
+      <section className="py-12 md:py-16 border-t border-b border-border">
         <div className="container-site">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="flex flex-col items-center gap-2">
@@ -341,20 +341,20 @@ export default function PricingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-primary/10" />
-        <div className="orb orb-primary w-[400px] h-[400px] -top-32 left-1/2 -translate-x-1/2 opacity-20" />
+        <div className="orb orb-primary w-52 sm:w-72 md:w-96 lg:w-[400px] h-52 sm:h-72 md:h-96 lg:h-[400px] -top-24 sm:-top-32 left-1/2 -translate-x-1/2 opacity-20" />
 
         <div className="container-site relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="heading-display text-3xl md:text-4xl mb-6">
               Siap Memulai Project Anda? <span className="text-gradient-primary">Let's Build Together!</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
               Konsultasi gratis untuk discuss kebutuhan dan get custom quote untuk project Anda.
             </p>
             <Link href="/contact">
-              <Button size="lg" className="bg-gradient-primary hover:opacity-90 shadow-glow text-lg px-10 py-6">
+              <Button size="lg" className="bg-gradient-primary hover:opacity-90 shadow-glow text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6">
                 Konsultasi Gratis
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>

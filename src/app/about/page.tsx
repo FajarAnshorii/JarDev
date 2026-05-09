@@ -103,22 +103,22 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-16 md:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-        <div className="orb orb-primary w-[500px] h-[500px] -top-48 -left-48 opacity-20" />
-        <div className="orb orb-secondary w-[400px] h-[400px] bottom-0 -right-32 opacity-15" />
+        <div className="orb orb-primary w-52 sm:w-72 md:w-96 lg:w-[500px] h-52 sm:h-72 md:h-96 lg:h-[500px] -top-24 sm:-top-32 md:-top-48 -left-24 sm:-left-32 md:-left-48 opacity-20" />
+        <div className="orb orb-secondary w-44 sm:w-64 md:w-80 lg:w-[400px] h-44 sm:h-64 md:h-80 lg:h-[400px] bottom-0 -right-16 sm:-right-24 md:-right-32 opacity-15" />
 
         <div className="container-site relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
               <Badge variant="outline" className="mb-6 border-primary/50 text-primary">
                 <Coffee className="w-4 h-4 mr-2" />
                 About Us
               </Badge>
-              <h1 className="heading-display text-4xl md:text-5xl lg:text-6xl mb-6">
+              <h1 className="heading-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6">
                 Membangun <span className="text-gradient-primary">Digital Dreams</span> Bersama
               </h1>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
                 Kami adalah tim developer dan designer yang passionate dalam menciptakan solusi digital berkualitas. Dengan pengalaman lebih dari 5 tahun, kami membantu bisnis dari berbagai ukuran untuk memiliki presence digital yang kuat.
               </p>
               <div className="grid grid-cols-2 gap-6">
@@ -134,11 +134,11 @@ export default function AboutPage() {
             </div>
 
             <div className="relative">
-              <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary/20 to-secondary/20 p-1 relative overflow-hidden">
+              <div className="aspect-square rounded-2xl sm:rounded-3xl bg-gradient-to-br from-primary/20 to-secondary/20 p-1 relative overflow-hidden">
                 <div className="absolute inset-0 bg-grid-pattern opacity-30" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
-                    <span className="text-8xl">👨‍💻</span>
+                    <span className="text-6xl sm:text-7xl md:text-8xl">👨‍💻</span>
                     <div className="mt-4 text-2xl font-bold heading-gradient">JarDev Builder</div>
                     <p className="text-muted-foreground mt-2">Building Digital Solutions</p>
                   </div>
@@ -151,11 +151,11 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-24 bg-card/50 relative">
+      <section className="py-16 md:py-24 bg-card/50 relative">
         <div className="container-site">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
             <Card className="bg-card border-primary/30">
-              <CardContent className="p-8">
+              <CardContent className="p-6 sm:p-8">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center mb-6">
                   <Target className="w-8 h-8 text-white" />
                 </div>
@@ -167,7 +167,7 @@ export default function AboutPage() {
             </Card>
 
             <Card className="bg-card border-secondary/30">
-              <CardContent className="p-8">
+              <CardContent className="p-6 sm:p-8">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-secondary flex items-center justify-center mb-6">
                   <Heart className="w-8 h-8 text-white" />
                 </div>
@@ -182,7 +182,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-24 relative">
+      <section className="py-16 md:py-24 relative">
         <div className="container-site">
           <SectionHeading
             badge="Nilai Kami"
@@ -216,7 +216,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-24 bg-card/50 relative">
+      <section className="py-16 md:py-24 bg-card/50 relative">
         <div className="container-site">
           <SectionHeading
             badge="Tim Kami"
@@ -225,14 +225,14 @@ export default function AboutPage() {
             centered
           />
 
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
             {team.map((member, index) => (
               <Card
                 key={index}
                 className="group bg-card border-border hover:border-primary/30 transition-all duration-300"
               >
-                <CardContent className="p-6 text-center">
-                  <Avatar className="w-24 h-24 mx-auto mb-4 ring-4 ring-primary/20">
+                <CardContent className="p-5 sm:p-6 text-center">
+                  <Avatar className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mx-auto mb-3 sm:mb-4 ring-4 ring-primary/20">
                     <AvatarFallback className="bg-gradient-primary text-2xl text-white">
                       {member.avatar}
                     </AvatarFallback>
@@ -257,7 +257,7 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-24 relative">
+      <section className="py-16 md:py-24 relative">
         <div className="container-site">
           <SectionHeading
             badge="Perjalanan"
@@ -305,9 +305,9 @@ export default function AboutPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-24 bg-gradient-primary/10 relative">
+      <section className="py-16 md:py-24 bg-gradient-primary/10 relative">
         <div className="container-site">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-gradient-primary mb-2">
@@ -321,9 +321,9 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-        <div className="orb orb-primary w-[400px] h-[400px] -top-32 left-1/2 -translate-x-1/2 opacity-20" />
+        <div className="orb orb-primary w-52 sm:w-72 md:w-96 lg:w-[400px] h-52 sm:h-72 md:h-96 lg:h-[400px] -top-24 sm:-top-32 left-1/2 -translate-x-1/2 opacity-20" />
 
         <div className="container-site relative z-10">
           <div className="max-w-3xl mx-auto text-center">
@@ -334,7 +334,7 @@ export default function AboutPage() {
             <h2 className="heading-display text-3xl md:text-4xl mb-6">
               Yuk, Bangun Project <span className="text-gradient-primary">Bersama!</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
               Kami siap membantu Anda menciptakan digital presence yang kuat dan memorable.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

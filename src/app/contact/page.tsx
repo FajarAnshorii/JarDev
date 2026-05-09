@@ -117,10 +117,10 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-16 md:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-        <div className="orb orb-primary w-[500px] h-[500px] -top-48 -right-48 opacity-20" />
-        <div className="orb orb-secondary w-[400px] h-[400px] bottom-0 -left-48 opacity-15" />
+        <div className="orb orb-primary w-52 sm:w-72 md:w-96 lg:w-[500px] h-52 sm:h-72 md:h-96 lg:h-[500px] -top-24 sm:-top-32 md:-top-48 -right-24 sm:-right-32 md:-right-48 opacity-20" />
+        <div className="orb orb-secondary w-44 sm:w-64 md:w-80 lg:w-[400px] h-44 sm:h-64 md:h-80 lg:h-[400px] bottom-0 -left-24 sm:-left-32 md:-left-48 opacity-15" />
 
         <div className="container-site relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -128,10 +128,10 @@ export default function ContactPage() {
               <MessageSquare className="w-4 h-4 mr-2" />
               Hubungi Kami
             </Badge>
-            <h1 className="heading-display text-4xl md:text-5xl lg:text-6xl mb-6">
+            <h1 className="heading-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6">
               Let's Build Something <span className="text-gradient-primary">Amazing</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
               Punya project in mind? Konsultasi gratis dengan tim kami. Kami siap membantu mengubah ide Anda menjadi kenyataan.
             </p>
           </div>
@@ -139,13 +139,13 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-12 relative">
+      <section className="py-8 md:py-12 relative">
         <div className="container-site">
-          <div className="grid lg:grid-cols-5 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
             {/* Contact Form */}
             <div className="lg:col-span-3">
               <Card className="bg-card border-border">
-                <CardContent className="p-8">
+                <CardContent className="p-5 sm:p-6 md:p-8">
                   {isSubmitted ? (
                     <motion.div
                       initial={{ opacity: 0, scale: 0.9 }}
@@ -168,8 +168,8 @@ export default function ContactPage() {
                       </Button>
                     </motion.div>
                   ) : (
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid md:grid-cols-2 gap-6">
+                    <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 sm:gap-6">
                         <div className="space-y-2">
                           <Label htmlFor="name" className="flex items-center gap-2">
                             <User className="w-4 h-4" />
@@ -236,7 +236,7 @@ export default function ContactPage() {
                         </div>
                       </div>
 
-                      <div className="grid md:grid-cols-2 gap-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 sm:gap-6">
                         <div className="space-y-2">
                           <Label htmlFor="service">Layanan yang Dibutuhkan *</Label>
                           <select
@@ -332,7 +332,7 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Info */}
-            <div className="lg:col-span-2 space-y-6">
+            <div className="lg:col-span-2 space-y-4 sm:space-y-6">
               {/* Quick Contact */}
               <Card className="bg-card border-border">
                 <CardContent className="p-6">
@@ -416,7 +416,7 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Quick Section */}
-      <section className="py-24 bg-card/50 relative">
+      <section className="py-16 md:py-24 bg-card/50 relative">
         <div className="container-site">
           <SectionHeading
             badge="FAQ"
@@ -461,16 +461,16 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-primary/10" />
-        <div className="orb orb-primary w-[400px] h-[400px] -top-32 left-1/2 -translate-x-1/2 opacity-20" />
+        <div className="orb orb-primary w-52 sm:w-72 md:w-96 lg:w-[400px] h-52 sm:h-72 md:h-96 lg:h-[400px] -top-24 sm:-top-32 left-1/2 -translate-x-1/2 opacity-20" />
 
         <div className="container-site relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="heading-display text-3xl md:text-4xl mb-6">
               Punya Pertanyaan Lebih? <span className="text-gradient-primary">Jangan Ragu!</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
               Tim kami siap membantu Anda 24/7. Jangan sungkan untuk bertanya.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -487,7 +487,7 @@ export default function ContactPage() {
               <Button
                 size="lg"
                 onClick={sendViaWhatsApp}
-                className="bg-green-500 hover:bg-green-600 text-white shadow-lg"
+                className="bg-green-500 hover:bg-green-600 text-white shadow-lg w-full sm:w-auto"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Chat Sekarang

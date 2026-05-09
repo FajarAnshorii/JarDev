@@ -35,14 +35,14 @@ export function HeroSection() {
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-grid-pattern opacity-50" />
 
-        {/* Gradient Orbs */}
+        {/* Gradient Orbs - Responsive sizes */}
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
           }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="orb orb-primary w-[600px] h-[600px] -top-48 -left-48"
+          className="orb orb-primary w-52 sm:w-72 md:w-96 lg:w-[600px] h-52 sm:h-72 md:h-96 lg:h-[600px] -top-24 sm:-top-32 md:-top-48 -left-24 sm:-left-32 md:-left-48"
         />
         <motion.div
           animate={{
@@ -50,7 +50,7 @@ export function HeroSection() {
             opacity: [0.3, 0.5, 0.3],
           }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="orb orb-secondary w-[500px] h-[500px] top-1/2 -right-48"
+          className="orb orb-secondary w-44 sm:w-64 md:w-80 lg:w-[500px] h-44 sm:h-64 md:h-80 lg:h-[500px] top-1/3 sm:top-1/2 -right-24 sm:-right-32 md:-right-48"
         />
         <motion.div
           animate={{
@@ -58,7 +58,7 @@ export function HeroSection() {
             opacity: [0.2, 0.4, 0.2],
           }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-          className="orb orb-accent w-[400px] h-[400px] bottom-0 left-1/3"
+          className="orb orb-accent w-36 sm:w-56 md:w-72 lg:w-[400px] h-36 sm:h-56 md:h-72 lg:h-[400px] bottom-0 left-1/4 sm:left-1/3"
         />
 
         {/* Noise Overlay */}
@@ -75,9 +75,9 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-8"
+            className="mb-6 md:mb-8"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs md:text-sm font-medium">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
@@ -91,7 +91,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6 md:mb-8 px-2"
           >
             <span className="text-gradient-heading">We Build</span>
             <br />
@@ -108,7 +108,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
+            className="text-sm md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed px-4"
           >
             JarDev Builder menghadirkan solusi digital profesional untuk
             bisnis Anda. Dari website interaktif hingga aplikasi mobile,
@@ -120,15 +120,15 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-10 md:mb-16 px-4"
           >
             <Link href="/contact">
               <Button
                 size="lg"
-                className="bg-gradient-primary hover:opacity-90 shadow-glow hover:shadow-glow-lg transition-all duration-300 text-lg px-8 py-6 h-auto group"
+                className="bg-gradient-primary hover:opacity-90 shadow-glow hover:shadow-glow-lg transition-all duration-300 text-sm md:text-lg px-6 md:px-8 py-4 md:py-6 h-auto group w-full sm:w-auto"
               >
                 Mulai Project
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
 
@@ -136,9 +136,9 @@ export function HeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="text-lg px-8 py-6 h-auto border-2 hover:bg-primary/10 hover:border-primary transition-all duration-300"
+                className="text-sm md:text-lg px-6 md:px-8 py-4 md:py-6 h-auto border-2 hover:bg-primary/10 hover:border-primary transition-all duration-300 w-full sm:w-auto"
               >
-                <Play className="mr-2 w-5 h-5" />
+                <Play className="mr-2 w-4 h-4 md:w-5 md:h-5" />
                 Lihat Portfolio
               </Button>
             </Link>
@@ -149,9 +149,9 @@ export function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="relative h-20 mb-12"
+            className="relative h-16 md:h-20 mb-8 md:mb-12"
           >
-            <div className="absolute inset-0 flex items-center justify-center gap-8">
+            <div className="absolute inset-0 flex items-center justify-center gap-4 md:gap-8">
               {floatingIcons.map((item, index) => (
                 <motion.div
                   key={index}
@@ -165,7 +165,7 @@ export function HeroSection() {
                     delay: item.delay,
                     ease: "easeInOut",
                   }}
-                  className="text-3xl md:text-4xl"
+                  className="text-2xl md:text-4xl"
                 >
                   {item.icon}
                 </motion.div>
@@ -178,7 +178,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8"
+            className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8 px-2"
           >
             {[
               { value: "150+", label: "Projects" },
@@ -191,12 +191,12 @@ export function HeroSection() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
-                className="glass rounded-xl p-4 md:p-6 hover-lift"
+                className="glass rounded-xl p-3 md:p-6 hover-lift"
               >
-                <div className="text-2xl md:text-4xl font-bold text-gradient-primary">
+                <div className="text-xl md:text-4xl font-bold text-gradient-primary">
                   {stat.value}
                 </div>
-                <div className="text-xs md:text-sm text-muted-foreground mt-1">
+                <div className="text-xs sm:text-[10px] md:text-sm text-muted-foreground mt-1">
                   {stat.label}
                 </div>
               </motion.div>

@@ -50,11 +50,11 @@ export function WhatsAppButton({
         <span className="absolute inset-0 rounded-full bg-green-500 opacity-0 group-hover:opacity-50 blur-xl transition-opacity duration-300" />
       </motion.a>
 
-      {/* Tooltip */}
-      <div className="absolute right-full mr-3 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+      {/* Tooltip - Mobile: below button, Desktop: right side */}
+      <div className="absolute right-1/2 sm:right-auto sm:left-full translate-x-1/2 sm:translate-x-0 top-full sm:top-1/2 sm:-translate-y-1/2 mt-2 sm:mt-0 sm:ml-3 mb-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
         <div className="bg-popover border border-border rounded-lg px-3 py-2 shadow-lg whitespace-nowrap">
-          <p className="text-sm font-medium text-popover-foreground">Chat WhatsApp</p>
-          <p className="text-xs text-muted-foreground">Respons cepat 24/7</p>
+          <p className="text-xs sm:text-sm font-medium text-popover-foreground">Chat WhatsApp</p>
+          <p className="text-[10px] sm:text-xs text-muted-foreground">Respons cepat 24/7</p>
         </div>
       </div>
     </motion.div>

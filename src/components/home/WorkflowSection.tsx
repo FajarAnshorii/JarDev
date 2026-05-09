@@ -78,7 +78,7 @@ const processSteps: ProcessStep[] = [
 
 export function WorkflowSection() {
   return (
-    <section className="relative py-20 md:py-32 overflow-hidden">
+    <section className="relative py-16 md:py-20 lg:py-32 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-grid-pattern opacity-30" />
       <div className="absolute inset-0 bg-linear-to-b from-transparent via-primary/5 to-transparent" />
@@ -94,54 +94,54 @@ export function WorkflowSection() {
         {/* Process Steps */}
         <div className="relative">
           {/* Connection Line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-primary via-secondary to-accent opacity-30" />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-linear-to-r from-primary via-secondary to-accent opacity-30" />
 
           <StaggerContainer
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
             staggerDelay={0.15}
           >
             {processSteps.map((step, index) => (
               <motion.div key={index} variants={staggerItem}>
                 <div className="relative h-full group">
                   {/* Card */}
-                  <div className="relative h-full p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover-lift overflow-hidden">
+                  <div className="relative h-full p-4 md:p-6 lg:p-8 rounded-xl md:rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover-lift overflow-hidden">
                     {/* Background Glow on Hover */}
-                    <div className={cn("absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-10 transition-opacity duration-300", step.color)} />
+                    <div className={cn("absolute inset-0 bg-linear-to-br opacity-0 group-hover:opacity-10 transition-opacity duration-300", step.color)} />
 
                     {/* Step Number */}
-                    <div className="flex items-center justify-between mb-6">
-                      <span className={cn("text-5xl font-bold opacity-10 bg-gradient-to-br bg-clip-text", step.color)}>
+                    <div className="flex items-center justify-between mb-4 md:mb-6">
+                      <span className={cn("text-4xl md:text-5xl font-bold opacity-10 bg-linear-to-br bg-clip-text", step.color)}>
                         {step.number}
                       </span>
-                      <div className={cn("w-12 h-12 rounded-xl bg-gradient-to-br p-[2px]", step.color)}>
+                      <div className={cn("w-10 h-10 md:w-12 md:h-12 rounded-xl bg-linear-to-br p-0.5", step.color)}>
                         <div className="w-full h-full rounded-xl bg-card flex items-center justify-center">
-                          <step.icon className="w-6 h-6 text-foreground" />
+                          <step.icon className="w-5 h-5 md:w-6 md:h-6 text-foreground" />
                         </div>
                       </div>
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-foreground mb-3">
+                    <h3 className="text-lg md:text-xl font-bold text-foreground mb-2 md:mb-3">
                       {step.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-muted-foreground text-sm mb-5 leading-relaxed">
+                    <p className="text-muted-foreground text-xs md:text-sm mb-4 md:mb-5 leading-relaxed">
                       {step.description}
                     </p>
 
                     {/* Features */}
-                    <ul className="space-y-2 mb-5">
+                    <ul className="space-y-2 md:space-y-2 mb-4 md:mb-5">
                       {step.features.map((feature, fIndex) => (
-                        <li key={fIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <CheckCircle className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                        <li key={fIndex} className="flex items-start gap-2 text-xs md:text-sm text-muted-foreground">
+                          <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-primary mt-0.5 shrink-0" />
                           {feature}
                         </li>
                       ))}
                     </ul>
 
                     {/* Duration */}
-                    <div className="flex items-center gap-2 text-sm font-medium">
+                    <div className="flex items-center gap-2 text-xs md:text-sm font-medium">
                       <span className="text-muted-foreground">Duration:</span>
                       <span className="text-foreground">{step.duration}</span>
                     </div>
@@ -158,24 +158,24 @@ export function WorkflowSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center mt-16"
+          className="text-center mt-10 md:mt-16"
         >
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-8 rounded-2xl glass">
-            <div className="text-left mr-4">
-              <h3 className="text-xl font-bold text-foreground mb-2">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-6 md:p-8 rounded-xl md:rounded-2xl glass">
+            <div className="text-left mr-4 mb-4 sm:mb-0">
+              <h3 className="text-lg md:text-xl font-bold text-foreground mb-2">
                 Siap Memulai Project Anda?
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground text-sm">
                 Konsultasi gratis dan dapatkan penawaran terbaik hari ini.
               </p>
             </div>
             <Link href="/contact">
               <Button
                 size="lg"
-                className="bg-gradient-primary hover:opacity-90 shadow-glow whitespace-nowrap"
+                className="bg-gradient-primary hover:opacity-90 shadow-glow whitespace-nowrap text-sm md:text-base"
               >
                 Mulai Konsultasi
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
               </Button>
             </Link>
           </div>

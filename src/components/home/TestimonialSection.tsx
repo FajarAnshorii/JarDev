@@ -63,7 +63,7 @@ const testimonials: Testimonial[] = [
 
 export function TestimonialSection() {
   return (
-    <section className="relative py-20 md:py-32 overflow-hidden">
+    <section className="relative py-16 md:py-20 lg:py-32 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-linear-to-b from-background via-secondary/5 to-background" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-secondary/10 rounded-full blur-[120px]" />
@@ -77,7 +77,7 @@ export function TestimonialSection() {
         />
 
         <StaggerContainer
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6"
           staggerDelay={0.15}
         >
           {testimonials.map((testimonial, index) => (
@@ -85,12 +85,12 @@ export function TestimonialSection() {
               <Card className="h-full bg-card border-border hover:border-primary/30 transition-all duration-300 hover-lift relative overflow-hidden">
                 {/* Quote Icon */}
                 <div className="absolute top-4 right-4 text-primary/10">
-                  <Quote className="w-16 h-16" />
+                  <Quote className="w-12 md:w-16 h-12 md:h-16" />
                 </div>
 
-                <CardContent className="p-6 md:p-8">
+                <CardContent className="p-4 md:p-6 lg:p-8">
                   {/* Rating Stars */}
-                  <div className="flex items-center gap-1 mb-4">
+                  <div className="flex items-center gap-1 mb-3 md:mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star
                         key={i}
@@ -100,18 +100,18 @@ export function TestimonialSection() {
                   </div>
 
                   {/* Content */}
-                  <p className="text-foreground leading-relaxed mb-6 relative z-10">
+                  <p className="text-foreground leading-relaxed mb-4 md:mb-6 relative z-10 text-sm md:text-base">
                     &ldquo;{testimonial.content}&rdquo;
                   </p>
 
                   {/* Project Type Badge */}
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-6">
+                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-4 md:mb-6">
                     {testimonial.projectType}
                   </div>
 
                   {/* Author */}
-                  <div className="flex items-center gap-4">
-                    <Avatar className="w-12 h-12 border-2 border-primary/20">
+                  <div className="flex items-center gap-3 md:gap-4">
+                    <Avatar className="w-10 h-10 md:w-12 md:h-12 border-2 border-primary/20">
                       <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
                       <AvatarFallback className="bg-gradient-primary text-white">
                         {testimonial.name
@@ -122,10 +122,10 @@ export function TestimonialSection() {
                     </Avatar>
 
                     <div>
-                      <h4 className="font-semibold text-foreground">
+                      <h4 className="font-semibold text-foreground text-sm md:text-base">
                         {testimonial.name}
                       </h4>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-xs md:text-sm text-muted-foreground">
                         {testimonial.role} at {testimonial.company}
                       </p>
                     </div>

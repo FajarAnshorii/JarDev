@@ -62,11 +62,11 @@ const services: Service[] = [
 
 export function ServicesSection() {
   return (
-    <section className="relative py-20 md:py-32 overflow-hidden">
+    <section className="relative py-16 md:py-20 lg:py-32 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-linear-to-b from-background via-secondary/5 to-background" />
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary/10 rounded-full blur-[120px] -translate-y-1/2" />
-      <div className="absolute top-1/2 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-[120px] -translate-y-1/2" />
+      <div className="absolute top-1/2 left-0 w-64 md:w-96 h-64 md:h-96 bg-primary/10 rounded-full blur-[120px] -translate-y-1/2" />
+      <div className="absolute top-1/2 right-0 w-64 md:w-96 h-64 md:h-96 bg-secondary/10 rounded-full blur-[120px] -translate-y-1/2" />
 
       <div className="container-site relative z-10">
         <SectionHeading
@@ -77,39 +77,39 @@ export function ServicesSection() {
         />
 
         <StaggerContainer
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
           staggerDelay={0.1}
         >
           {services.map((service, index) => (
             <motion.div key={index} variants={staggerItem}>
               <Card className="group h-full bg-card border-border hover:border-primary/50 transition-all duration-300 overflow-hidden hover-lift">
-                <CardContent className="p-8 h-full flex flex-col">
+                <CardContent className="p-4 md:p-6 lg:p-8 h-full flex flex-col">
                   {/* Icon */}
                   <div
                     className={cn(
-                      "w-14 h-14 rounded-xl bg-gradient-to-br p-[2px] mb-5",
+                      "w-12 h-12 md:w-14 md:h-14 rounded-xl bg-linear-to-br p-0.5 mb-4 md:mb-5",
                       service.color
                     )}
                   >
                     <div className="w-full h-full rounded-xl bg-card flex items-center justify-center">
-                      <service.icon className="w-7 h-7 text-foreground" />
+                      <service.icon className="w-6 h-6 md:w-7 md:h-7 text-foreground" />
                     </div>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg md:text-xl font-bold text-foreground mb-2 md:mb-3 group-hover:text-primary transition-colors">
                     {service.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-muted-foreground text-sm mb-5 leading-relaxed flex-1">
+                  <p className="text-muted-foreground text-sm mb-4 md:mb-5 leading-relaxed flex-1">
                     {service.description}
                   </p>
 
                   {/* Features */}
-                  <ul className="space-y-3 mb-6">
+                  <ul className="space-y-2 md:space-y-3 mb-4 md:mb-6">
                     {service.features.map((feature, fIndex) => (
-                      <li key={fIndex} className="flex items-center gap-3 text-sm text-muted-foreground">
+                      <li key={fIndex} className="flex items-center gap-2 md:gap-3 text-xs md:text-sm text-muted-foreground">
                         <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
                         {feature}
                       </li>

@@ -81,7 +81,7 @@ export function StatsSection() {
   const [inView, setInView] = useState(false);
 
   return (
-    <section className="relative py-20 overflow-hidden">
+    <section className="relative py-16 md:py-20 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-linear-to-b from-background via-primary/5 to-background" />
       <div className="absolute inset-0 bg-dot-pattern opacity-30" />
@@ -95,7 +95,7 @@ export function StatsSection() {
         />
 
         <StaggerContainer
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8"
           staggerDelay={0.15}
         >
           {stats.map((stat, index) => (
@@ -106,14 +106,14 @@ export function StatsSection() {
               onViewportEnter={() => setInView(true)}
             >
               {/* Card */}
-              <div className="relative p-8 md:p-10 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 overflow-hidden">
+              <div className="relative p-4 md:p-8 lg:p-10 rounded-xl md:rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 overflow-hidden">
                 {/* Background Glow */}
                 <div className="absolute inset-0 bg-linear-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 {/* Content */}
                 <div className="relative">
                   {/* Big Number */}
-                  <div className="text-5xl md:text-6xl font-bold text-gradient-primary mb-4">
+                  <div className="text-3xl md:text-5xl lg:text-6xl font-bold text-gradient-primary mb-2 md:mb-4">
                     <Counter
                       value={stat.value}
                       suffix={stat.suffix}
@@ -122,18 +122,18 @@ export function StatsSection() {
                   </div>
 
                   {/* Label */}
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                  <h3 className="text-base md:text-xl font-semibold text-foreground mb-2 md:mb-3">
                     {stat.label}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                     {stat.description}
                   </p>
                 </div>
 
                 {/* Corner Decoration */}
-                <div className="absolute top-0 right-0 w-24 h-24 bg-linear-to-br from-primary/20 to-transparent rounded-bl-full" />
+                <div className="absolute top-0 right-0 w-16 md:w-24 h-16 md:h-24 bg-linear-to-br from-primary/20 to-transparent rounded-bl-full" />
               </div>
             </motion.div>
           ))}

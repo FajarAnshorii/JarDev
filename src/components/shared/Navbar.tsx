@@ -125,7 +125,7 @@ export function Navbar() {
                     />
                   )}
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-80 p-2 bg-card border-border">
+                <DropdownMenuContent align="end" className="w-72 sm:w-80 p-2 bg-card border-border">
                   {serviceLinks.map((service) => (
                     <DropdownMenuItem key={service.href}>
                       <Link
@@ -215,7 +215,7 @@ export function Navbar() {
                       href={link.href}
                       onClick={() => setIsMobileMenuOpen(false)}
                       className={cn(
-                        "flex items-center px-4 py-3 rounded-xl text-lg font-medium transition-all duration-200",
+                        "flex items-center px-4 py-3 rounded-xl text-base sm:text-lg font-medium transition-all duration-200",
                         pathname === link.href
                           ? "bg-primary/10 text-primary"
                           : "text-muted-foreground hover:bg-muted hover:text-foreground"

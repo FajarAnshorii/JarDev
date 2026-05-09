@@ -144,10 +144,10 @@ export default function ServicesPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-24 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-        <div className="orb orb-primary w-[400px] h-[400px] -top-48 -right-48 opacity-30" />
-        <div className="orb orb-secondary w-[300px] h-[300px] bottom-0 -left-48 opacity-20" />
+        <div className="orb orb-primary w-52 sm:w-72 md:w-96 lg:w-[400px] h-52 sm:h-72 md:h-96 lg:h-[400px] -top-24 sm:-top-32 md:-top-48 -right-24 sm:-right-32 md:-right-48 opacity-30" />
+        <div className="orb orb-secondary w-36 sm:w-56 md:w-72 lg:w-[300px] h-36 sm:h-56 md:h-72 lg:h-[300px] bottom-0 -left-24 sm:-left-32 md:-left-48 opacity-20" />
 
         <div className="container-site relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -155,10 +155,10 @@ export default function ServicesPage() {
               <Monitor className="w-4 h-4 mr-2" />
               Layanan Kami
             </Badge>
-            <h1 className="heading-display text-3xl md:text-5xl lg:text-6xl mb-6 md:mb-8">
+            <h1 className="heading-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 md:mb-8">
               Solusi Digital <span className="text-gradient-primary">Komprehensif</span>
             </h1>
-            <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-12 leading-relaxed px-4">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 md:mb-12 leading-relaxed">
               Dari website sederhana hingga aplikasi kompleks, kami hadir memberikan solusi digital yang membantu bisnis Anda berkembang di era digital.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 px-4">
@@ -179,7 +179,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 md:py-24 lg:pt-32 relative">
+      <section className="py-12 sm:py-16 md:py-24 lg:pt-32 relative">
         <div className="container-site">
           <SectionHeading
             badge="Layanan"
@@ -188,7 +188,7 @@ export default function ServicesPage() {
             centered
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 md:mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-12 md:mt-16">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
@@ -237,7 +237,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 md:py-24 lg:pt-32 bg-card/50 relative">
+      <section className="py-12 sm:py-16 md:py-24 lg:pt-32 bg-card/50 relative">
         <div className="container-site">
           <SectionHeading
             badge="Proses"
@@ -246,12 +246,12 @@ export default function ServicesPage() {
             centered
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mt-12 sm:mt-16">
             {process.map((item, index) => (
               <div key={index} className="relative group">
                 <div className="absolute inset-0 bg-primary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative p-6 md:p-8 rounded-2xl border border-border hover:border-primary/30 transition-all">
-                  <div className="text-5xl md:text-6xl font-bold text-primary/10 mb-4 md:mb-6">
+                <div className="relative p-5 sm:p-6 md:p-8 rounded-xl md:rounded-2xl border border-border hover:border-primary/30 transition-all">
+                  <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-primary/10 mb-3 sm:mb-4 md:mb-6">
                     {item.step}
                   </div>
                   <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4">{item.title}</h3>
@@ -266,7 +266,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-16 md:py-24 lg:pt-32 relative">
+      <section className="py-12 sm:py-16 md:py-24 lg:pt-32 relative">
         <div className="container-site">
           <SectionHeading
             badge="Teknologi"
@@ -306,20 +306,20 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 lg:py-32 relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-primary/10" />
-        <div className="orb orb-primary w-[500px] h-[500px] -top-48 left-1/2 -translate-x-1/2 opacity-20" />
+        <div className="orb orb-primary w-52 sm:w-72 md:w-96 lg:w-[500px] h-52 sm:h-72 md:h-96 lg:h-[500px] -top-24 sm:-top-32 md:-top-48 left-1/2 -translate-x-1/2 opacity-20" />
 
         <div className="container-site relative z-10">
           <div className="max-w-3xl mx-auto text-center px-4">
-            <h2 className="heading-display text-2xl md:text-4xl lg:text-5xl mb-4 md:mb-6">
+            <h2 className="heading-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-3 md:mb-6">
               Siap Mengubah Ide Menjadi <span className="text-gradient-primary">Realitas</span>?
             </h2>
-            <p className="text-base md:text-lg text-muted-foreground mb-6 md:mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-lg text-muted-foreground mb-5 sm:mb-6 md:mb-8 leading-relaxed">
               Konsultasi gratis dengan tim kami. Dapatkan penawaran terbaik untuk proyek Anda.
             </p>
             <Link href="/contact">
-              <Button size="lg" className="bg-gradient-primary hover:opacity-90 shadow-glow text-base md:text-lg px-8 md:px-10 py-5 md:py-6">
+              <Button size="lg" className="bg-gradient-primary hover:opacity-90 shadow-glow text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6">
                 Mulai Konsultasi
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
