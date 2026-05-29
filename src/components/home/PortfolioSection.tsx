@@ -29,6 +29,16 @@ const portfolios: PortfolioItem[] = [
     link: "https://me-gacoan-profile.vercel.app/",
     github: "https://github.com/FajarAnshorii/ME-GACOAN-Company-Profile.git",
     featured: true,
+  },
+  {
+    title: "Soobin Services",
+    category: "Website Development",
+    description: "Solusi terpercaya untuk kebutuhan akademik Anda. Tersedia layanan Cek Turnitin, Parafrase, Joki Tugas, dan Unlock Dokumen dengan harga termurah di pasaran.",
+    image: "/portfolio/soobin.png",
+    tags: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+    link: "https://soobin-official.vercel.app/",
+    github: "https://github.com/FajarAnshorii/Soobin-Services-Official.git",
+    featured: true,
   }
 ];
 
@@ -56,7 +66,7 @@ export function PortfolioSection() {
               key={index}
               variants={staggerItem}
               className={cn(
-                "group md:col-span-2 w-full mx-auto"
+                "group w-full mx-auto"
               )}
             >
               <Card className="h-full bg-card border-border hover:border-primary/50 transition-all duration-300 overflow-hidden hover-lift">
@@ -72,7 +82,7 @@ export function PortfolioSection() {
                     ) : (
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                         <span className="text-5xl sm:text-6xl opacity-30">
-                          {project.title.toLowerCase().includes("gacoan") ? "🍜" : "🏢"}
+                          {project.title.toLowerCase().includes("gacoan") ? "🍜" : project.title.toLowerCase().includes("soobin") ? "🎓" : "🏢"}
                         </span>
                       </div>
                     )}

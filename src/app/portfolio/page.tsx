@@ -32,6 +32,19 @@ const projects = [
     github: "https://github.com/FajarAnshorii/ME-GACOAN-Company-Profile.git",
     year: "2026",
     featured: true,
+  },
+  {
+    id: 2,
+    title: "Soobin Services",
+    category: "website",
+    categoryLabel: "Website",
+    description: "Solusi terpercaya untuk kebutuhan akademik Anda. Tersedia layanan Cek Turnitin, Parafrase, Joki Tugas, dan Unlock Dokumen dengan harga termurah di pasaran.",
+    image: "/portfolio/soobin.png",
+    tags: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+    link: "https://soobin-official.vercel.app/",
+    github: "https://github.com/FajarAnshorii/Soobin-Services-Official.git",
+    year: "2026",
+    featured: true,
   }
 ];
 
