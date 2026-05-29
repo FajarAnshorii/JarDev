@@ -58,6 +58,19 @@ const projects = [
     github: "https://github.com/FajarAnshorii/YuGi-Pedia.git",
     year: "2026",
     featured: true,
+  },
+  {
+    id: 4,
+    title: "JOKOPI Company Profile",
+    category: "website",
+    categoryLabel: "Website",
+    description: "Jokopi berupaya menjadi sebuah wadah untuk menginspirasi, bercerita, dan membangun budaya positif melalui sebuah medium komoditas universal yaitu kopi.",
+    image: "/portfolio/jokopi.png",
+    tags: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+    link: "https://jokopi-company-profile.vercel.app/",
+    github: "https://github.com/FajarAnshorii/JOKOPI-COMPANY-PROFILE.git",
+    year: "2026",
+    featured: true,
   }
 ];
 
