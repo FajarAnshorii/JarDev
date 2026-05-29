@@ -24,7 +24,7 @@ const portfolios: PortfolioItem[] = [
     title: "Company Profile ME GACOAN",
     category: "Website Development",
     description: "Website Profil Perusahaan (Company Profile) resmi ME GACOAN bergaya Dark-Modern Sinematik yang interaktif, enerjik, dan dioptimalkan secara realtime dengan Next.js & Tailwind CSS.",
-    image: "/portfolio/gacoan.jpg",
+    image: "/portfolio/gacoan.png",
     tags: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
     link: "https://me-gacoan-profile.vercel.app/",
     github: "https://github.com/FajarAnshorii/ME-GACOAN-Company-Profile.git",
@@ -62,12 +62,20 @@ export function PortfolioSection() {
               <Card className="h-full bg-card border-border hover:border-primary/50 transition-all duration-300 overflow-hidden hover-lift">
                 <CardContent className="p-0 h-full">
                   <div className="relative aspect-video overflow-hidden">
-                    {/* Placeholder Image */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                      <span className="text-5xl sm:text-6xl opacity-30">
-                        {project.title.toLowerCase().includes("gacoan") ? "🍜" : "🏢"}
-                      </span>
-                    </div>
+                    {/* Project Cover Image */}
+                    {project.image ? (
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                        <span className="text-5xl sm:text-6xl opacity-30">
+                          {project.title.toLowerCase().includes("gacoan") ? "🍜" : "🏢"}
+                        </span>
+                      </div>
+                    )}
 
                     {/* Overlay on Hover */}
                     <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">

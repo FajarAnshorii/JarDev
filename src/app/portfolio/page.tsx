@@ -26,7 +26,7 @@ const projects = [
     category: "website",
     categoryLabel: "Website",
     description: "Website Profil Perusahaan (Company Profile) resmi ME GACOAN bergaya Dark-Modern Sinematik yang interaktif, enerjik, dan dioptimalkan secara realtime dengan Next.js & Tailwind CSS.",
-    image: "/portfolio/gacoan.jpg",
+    image: "/portfolio/gacoan.png",
     tags: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
     link: "https://me-gacoan-profile.vercel.app/",
     github: "https://github.com/FajarAnshorii/ME-GACOAN-Company-Profile.git",
@@ -79,15 +79,25 @@ export default function PortfolioPage() {
                 className="group relative overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-500 hover-lift"
               >
                 <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-5xl sm:text-6xl opacity-50 group-hover:scale-110 transition-transform duration-500">
-                      {project.category === "ecommerce" && "🛒"}
-                      {project.category === "website" && "🌐"}
-                      {project.category === "mobile" && "📱"}
-                      {project.category === "design" && "🎨"}
-                    </span>
-                  </div>
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <>
+                      <div className="absolute inset-0 bg-grid-pattern opacity-30" />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-5xl sm:text-6xl opacity-50 group-hover:scale-110 transition-transform duration-500">
+                          {project.category === "ecommerce" && "🛒"}
+                          {project.category === "website" && "🌐"}
+                          {project.category === "mobile" && "📱"}
+                          {project.category === "design" && "🎨"}
+                        </span>
+                      </div>
+                    </>
+                  )}
                   <div className="absolute top-4 right-4">
                     <Badge variant="secondary" className="bg-primary/20 text-primary border-0">
                       {project.categoryLabel}
@@ -155,15 +165,23 @@ export default function PortfolioPage() {
                 key={index}
                 className="group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-300"
               >
-                <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 relative">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-4xl sm:text-5xl opacity-40 group-hover:opacity-70 transition-opacity">
-                      {project.category === "ecommerce" && "🛒"}
-                      {project.category === "website" && "🌐"}
-                      {project.category === "mobile" && "📱"}
-                      {project.category === "design" && "🎨"}
-                    </span>
-                  </div>
+                <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 relative overflow-hidden">
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="text-4xl sm:text-5xl opacity-40 group-hover:opacity-70 transition-opacity">
+                        {project.category === "ecommerce" && "🛒"}
+                        {project.category === "website" && "🌐"}
+                        {project.category === "mobile" && "📱"}
+                        {project.category === "design" && "🎨"}
+                      </span>
+                    </div>
+                  )}
                 </div>
 
                 <CardContent className="p-5">
