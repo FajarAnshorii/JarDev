@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ExternalLink, ArrowRight } from "lucide-react";
+import { ExternalLink, ArrowRight, Code } from "lucide-react";
 import { SectionHeading, StaggerContainer, staggerItem } from "@/components/shared/SectionHeading";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -21,40 +21,15 @@ interface PortfolioItem {
 
 const portfolios: PortfolioItem[] = [
   {
-    title: "TechCorp Indonesia",
+    title: "Company Profile ME GACOAN",
     category: "Website Development",
-    description: "Company profile modern dengan animasi interaktif dan CMS untuk management konten.",
-    image: "/portfolio/techcorp.jpg",
-    tags: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
-    link: "https://techcorp.id",
+    description: "Website Profil Perusahaan (Company Profile) resmi ME GACOAN bergaya Dark-Modern Sinematik yang interaktif, enerjik, dan dioptimalkan secara realtime dengan Next.js & Tailwind CSS.",
+    image: "/portfolio/gacoan.jpg",
+    tags: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
+    link: "https://me-gacoan-profile.vercel.app/",
+    github: "https://github.com/FajarAnshorii/ME-GACOAN-Company-Profile.git",
     featured: true,
-  },
-  {
-    title: "ShopFresh E-Commerce",
-    category: "E-Commerce",
-    description: "Toko online lengkap dengan fitur cart, payment gateway, dan dashboard admin.",
-    image: "/portfolio/shopfresh.jpg",
-    tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
-    link: "https://shopfresh.id",
-    featured: true,
-  },
-  {
-    title: "HealthApp Mobile",
-    category: "Mobile App",
-    description: "Aplikasi kesehatan dengan fitur tracking, reminder, dan konsultasi dokter.",
-    image: "/portfolio/healthapp.jpg",
-    tags: ["React Native", "Firebase", "Redux"],
-    github: "https://github.com/jardev/healthapp",
-  },
-  {
-    title: "EduLearn Platform",
-    category: "Web Application",
-    description: "Platform e-learning dengan video streaming, quiz, dan progress tracking.",
-    image: "/portfolio/edulearn.jpg",
-    tags: ["Next.js", "Prisma", "PostgreSQL", "AWS"],
-    link: "https://edulearn.id",
-    featured: true,
-  },
+  }
 ];
 
 export function PortfolioSection() {
@@ -73,7 +48,7 @@ export function PortfolioSection() {
         />
 
         <StaggerContainer
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto"
           staggerDelay={0.15}
         >
           {portfolios.map((project, index) => (
@@ -81,8 +56,7 @@ export function PortfolioSection() {
               key={index}
               variants={staggerItem}
               className={cn(
-                "group",
-                project.featured && "md:col-span-2 lg:col-span-1"
+                "group md:col-span-2 w-full mx-auto"
               )}
             >
               <Card className="h-full bg-card border-border hover:border-primary/50 transition-all duration-300 overflow-hidden hover-lift">
@@ -91,7 +65,7 @@ export function PortfolioSection() {
                     {/* Placeholder Image */}
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                       <span className="text-5xl sm:text-6xl opacity-30">
-                        {index === 0 ? "🏢" : index === 1 ? "🛒" : index === 2 ? "📱" : "📚"}
+                        {project.title.toLowerCase().includes("gacoan") ? "🍜" : "🏢"}
                       </span>
                     </div>
 
@@ -103,6 +77,7 @@ export function PortfolioSection() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="w-12 h-12 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition-transform"
+                          title="Kunjungi Website"
                         >
                           <ExternalLink className="w-5 h-5 text-white" />
                         </a>
@@ -112,19 +87,10 @@ export function PortfolioSection() {
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-12 h-12 rounded-full bg-muted flex items-center justify-center hover:scale-110 transition-transform"
+                          className="w-12 h-12 rounded-full bg-muted flex items-center justify-center hover:scale-110 transition-transform text-foreground"
+                          title="Lihat Repository GitHub"
                         >
-                          <ExternalLink className="w-5 h-5" />
-                        </a>
-                      )}
-                      {project.github && (
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-12 h-12 rounded-full bg-muted flex items-center justify-center hover:scale-110 transition-transform"
-                        >
-                          <ExternalLink className="w-5 h-5" />
+                          <Code className="w-5 h-5" />
                         </a>
                       )}
                     </div>
@@ -133,7 +99,7 @@ export function PortfolioSection() {
                     {project.featured && (
                       <div className="absolute top-2 sm:top-4 left-2 sm:left-4">
                         <Badge className="bg-gradient-primary text-white border-0">
-                          Featured
+                          Featured Project
                         </Badge>
                       </div>
                     )}
