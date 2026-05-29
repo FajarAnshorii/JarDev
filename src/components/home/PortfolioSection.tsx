@@ -39,6 +39,16 @@ const portfolios: PortfolioItem[] = [
     link: "https://soobin-official.vercel.app/",
     github: "https://github.com/FajarAnshorii/Soobin-Services-Official.git",
     featured: true,
+  },
+  {
+    title: "YugiPedia",
+    category: "Website Development",
+    description: "YuGi Pedia adalah koleksi kartu Yu-Gi-Oh! terlengkap di Indonesia dengan fitur lengkap meliputi album kartu, filter Monster/Spell/Trap, cek harga real-time dari berbagai marketplace, dan dark mode. Didukung database PostgreSQL dan API YGOPRODeck untuk data terkini.",
+    image: "/portfolio/yugi.png",
+    tags: ["Next.js", "React", "PostgreSQL", "Tailwind CSS"],
+    link: "https://yugi-pedia.vercel.app/",
+    github: "https://github.com/FajarAnshorii/YuGi-Pedia.git",
+    featured: true,
   }
 ];
 
@@ -58,7 +68,7 @@ export function PortfolioSection() {
         />
 
         <StaggerContainer
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
           staggerDelay={0.15}
         >
           {portfolios.map((project, index) => (
@@ -82,7 +92,7 @@ export function PortfolioSection() {
                     ) : (
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                         <span className="text-5xl sm:text-6xl opacity-30">
-                          {project.title.toLowerCase().includes("gacoan") ? "🍜" : project.title.toLowerCase().includes("soobin") ? "🎓" : "🏢"}
+                          {project.title.toLowerCase().includes("gacoan") ? "🍜" : project.title.toLowerCase().includes("soobin") ? "🎓" : project.title.toLowerCase().includes("yugi") ? "🃏" : "🏢"}
                         </span>
                       </div>
                     )}

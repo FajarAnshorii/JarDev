@@ -45,6 +45,19 @@ const projects = [
     github: "https://github.com/FajarAnshorii/Soobin-Services-Official.git",
     year: "2026",
     featured: true,
+  },
+  {
+    id: 3,
+    title: "YugiPedia",
+    category: "website",
+    categoryLabel: "Website",
+    description: "YuGi Pedia adalah koleksi kartu Yu-Gi-Oh! terlengkap di Indonesia dengan fitur lengkap meliputi album kartu, filter Monster/Spell/Trap, cek harga real-time dari berbagai marketplace, dan dark mode. Didukung database PostgreSQL dan API YGOPRODeck untuk data terkini.",
+    image: "/portfolio/yugi.png",
+    tags: ["Next.js", "React", "PostgreSQL", "Tailwind CSS"],
+    link: "https://yugi-pedia.vercel.app/",
+    github: "https://github.com/FajarAnshorii/YuGi-Pedia.git",
+    year: "2026",
+    featured: true,
   }
 ];
 
